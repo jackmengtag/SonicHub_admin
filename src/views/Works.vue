@@ -123,6 +123,10 @@
             <span v-if="!detail.tags?.length" class="muted">无标签</span>
           </div>
         </div>
+        <div v-if="detail.audio_url" class="detail-section">
+          <h4>音频试听</h4>
+          <audio :src="mediaUrl(detail.audio_url)" controls preload="none" style="width: 100%" />
+        </div>
         <div class="detail-section">
           <h4>风险关联</h4>
           <div class="detail-grid">
@@ -166,6 +170,8 @@ const selection = ref([])
 const drawerVisible = ref(false)
 const detail = ref(null)
 const extra = ref({})
+
+const mediaUrl = (u) => (!u ? '' : (/^https?:\/\//.test(u) ? u : api.origin() + u))
 
 const list = computed(() => {
   const q = query.value.trim().toLowerCase()
