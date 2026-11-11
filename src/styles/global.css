@@ -1122,46 +1122,6 @@ a {
   font-weight: 600;
 }
 
-.lc-demo {
-  margin-top: 16px;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px dashed var(--line-strong);
-  background: rgba(255, 255, 255, 0.015);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 7px;
-}
-
-.lc-demo span {
-  font-size: 10px;
-  color: var(--text-3);
-}
-
-.lc-demo button {
-  padding: 4px 8px;
-  border-radius: 6px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--text-2);
-  font-size: 10px;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.lc-demo button:hover {
-  border-color: rgba(255, 122, 69, 0.4);
-  color: var(--accent);
-}
-
-.lc-demo p {
-  width: 100%;
-  margin: 2px 0 0;
-  font-size: 9.5px;
-  color: #5f6d6a;
-}
-
 .lc-foot {
   display: flex;
   align-items: center;

@@ -83,6 +83,10 @@ async function login(phone, code) {
   return data
 }
 
+function sendSmsCode(phone) {
+  return request('/auth/sms/send', { method: 'POST', body: { phone }, auth: false })
+}
+
 async function logoutRemote() {
   const a = authData()
   if (a && a.refresh_token) {
@@ -103,6 +107,7 @@ const api = {
   clearAuth,
   request,
   login,
+  sendSmsCode,
   logoutRemote,
   me: () => request('/me'),
 
